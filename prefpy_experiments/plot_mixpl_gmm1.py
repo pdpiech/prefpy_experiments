@@ -16,12 +16,12 @@ def plot_error_time_data(str_error_type,          # string, title of the error m
     fig = plt.figure(num=1, figsize=(1400/96, 500/96), dpi=96)
     plt.subplot(121)
     plt.title(str_error_type)
-    plt.xlabel("n (votes)")
+    plt.xlabel("n (rankings)")
     gmm_line1, = plt.plot(error_results.T[0], error_results.T[1], "bs", markersize=8.0, label="GMM")
 
     plt.subplot(122)
     plt.title("Time (seconds)")
-    plt.xlabel("n (votes)")
+    plt.xlabel("n (rankings)")
     plt.plot(time_results.T[0], time_results.T[3], "bs", markersize=8.0, label="GMM")
     momntCalc_line, = plt.plot(time_results.T[0], time_results.T[1], "ro", markersize=8.0, label="GMM-Moments") # GMM moment value calc time
     optoCalc_line, = plt.plot(time_results.T[0], time_results.T[2], "yd", markersize=8.0, label="GMM-Opt") # GMM optimization time
